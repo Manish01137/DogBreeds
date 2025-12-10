@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PawPedia – Find Your Perfect Pup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icon Library (Remix Icon) -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar enhanced-nav">
+    <div class="container nav-inner">
+      
+      <!-- Brand -->
+      <a href="#" class="nav-logo fade-slide">
+        <div class="logo-icon pulse">
+          <i class="ri-bear-smile-fill"></i>
+        </div>
+        <span class="logo-text">PawPedia</span>
+      </a>
+  
+      <!-- Mobile Toggle Button -->
+      <button class="nav-toggle bounce" id="navToggle" aria-label="Toggle navigation">
+        <i class="ri-menu-3-line"></i>
+      </button>
+  
+      <!-- Navigation Links -->
+      <nav class="nav-links slide-down" id="navLinks">
+        <a href="#hero" class="nav-link">
+          <i class="ri-home-4-line"></i>
+          Home
+        </a>
+  
+        <a href="#popular" class="nav-link">
+          <i class="ri-grid-line"></i>
+          Breeds
+        </a>
+  
+        <a href="#footer" class="nav-link">
+          <i class="ri-heart-3-line"></i>
+          Favorites
+        </a>
+      </nav>
+  
+    </div>
+  </header>
+  
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <!-- ========= HERO SECTION ========= -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <!-- Left side -->
+        <div class="hero-content">
+          <div class="hero-chip">
+            <span class="chip-icon">
+              <i class="ri-sparkling-2-fill"></i>
+            </span>
+            <span>Discover 200+ Dog Breeds</span>
+          </div>
+
+          <h1 class="hero-title">
+            Find Your <span class="accent">Perfect Pup</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Explore our comprehensive database of dog breeds. Learn about temperaments,
+            care requirements, and find the perfect companion for your lifestyle.
+          </p>
+
+          <!-- Search Bar -->
+          <div class="hero-search">
+            <i class="ri-search-line search-icon"></i>
+            <input
+              type="text"
+              id="breedSearch"
+              placeholder="Search for a breed..."
+              aria-label="Search for a breed"
+            />
+          </div>
+
+          <!-- Hero Buttons -->
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="exploreBtn">
+              Explore Breeds
+              <i class="ri-arrow-right-line"></i>
+            </button>
+            <button class="btn btn-ghost" id="randomBtn">
+              <i class="ri-sparkling-2-line"></i>
+              Random Breed
+            </button>
+          </div>
+        </div>
+
+        <!-- Right side (Image card) -->
+        <div class="hero-visual">
+          <div class="hero-image-card">
+            <!-- Replace the image URL with your own local file if you want -->
+            <img
+              src="Dog.jpeg"
+              alt="Happy dog on the beach"
+            />
+
+            <!-- Floating badge top-left -->
+            <div class="badge badge-top">
+              <div class="badge-icon">
+                <i class="ri-paw-fill"></i>
+              </div>
+              <div class="badge-text">
+                <span class="badge-title">200+</span>
+                <span class="badge-sub">Breeds</span>
+              </div>
+            </div>
+
+            <!-- Floating badge bottom-right -->
+            <div class="badge badge-bottom">
+              <div class="badge-icon heart">
+                <i class="ri-heart-3-fill"></i>
+              </div>
+              <div class="badge-text">
+                <span class="badge-title">Save</span>
+                <span class="badge-sub">Favorites</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= POPULAR PICKS ========= -->
+    <section class="popular" id="popular">
+      <div class="container">
+        <div class="section-header">
+          <h2>Popular Picks</h2>
+          <p>
+            Discover some of the most beloved dog breeds, handpicked for their unique
+            qualities and widespread popularity.
+          </p>
+        </div>
+
+        <div class="card-grid" id="breedGrid">
+          <!-- Card 1 -->
+          <article class="breed-card" data-name="golden retriever">
+            <div class="card-image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Golden Retriever"
+              />
+              <button class="card-heart" aria-label="Save Golden Retriever">
+                <i class="ri-heart-line"></i>
+              </button>
+            </div>
+            <div class="card-body">
+              <h3>Golden Retriever</h3>
+              <div class="card-location">
+                <i class="ri-map-pin-line"></i>
+                <span>Scotland</span>
+              </div>
+              <div class="card-tags">
+                <span class="tag">Friendly</span>
+                <span class="tag">Intelligent</span>
+                <span class="tag">Devoted</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="breed-card" data-name="french bulldog">
+            <div class="card-image-wrapper">
+              <img
+                src="frenchdog.jpg"
+                alt="French Bulldog"
+              />
+              <button class="card-heart" aria-label="Save French Bulldog">
+                <i class="ri-heart-line"></i>
+              </button>
+              <div class="size-chip">
+                <i class="ri-ruler-line"></i>
+                <span>Small</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>French Bulldog</h3>
+              <div class="card-location">
+                <i class="ri-map-pin-line"></i>
+                <span>France</span>
+              </div>
+              <div class="card-tags">
+                <span class="tag">Playful</span>
+                <span class="tag">Adaptable</span>
+                <span class="tag">Smart</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="breed-card" data-name="german shepherd">
+            <div class="card-image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/1390361/pexels-photo-1390361.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="German Shepherd"
+              />
+              <button class="card-heart" aria-label="Save German Shepherd">
+                <i class="ri-heart-line"></i>
+              </button>
+            </div>
+            <div class="card-body">
+              <h3>German Shepherd</h3>
+              <div class="card-location">
+                <i class="ri-map-pin-line"></i>
+                <span>Germany</span>
+              </div>
+              <div class="card-tags">
+                <span class="tag">Loyal</span>
+                <span class="tag">Confident</span>
+                <span class="tag">Courageous</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="breed-card" data-name="siberian husky">
+            <div class="card-image-wrapper">
+              <img
+                src="dog22.jpg"
+                alt="Siberian Husky"
+              />
+              <button class="card-heart" aria-label="Save Siberian Husky">
+                <i class="ri-heart-line"></i>
+              </button>
+            </div>
+            <div class="card-body">
+              <h3>Siberian Husky</h3>
+              <div class="card-location">
+                <i class="ri-map-pin-line"></i>
+                <span>Russia</span>
+              </div>
+              <div class="card-tags">
+                <span class="tag">Outgoing</span>
+                <span class="tag">Alert</span>
+                <span class="tag">Gentle</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= STATS + FOOTER-TOP ========= -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>200+</h3>
+            <p>Dog Breeds</p>
+          </div>
+          <div class="stat-item">
+            <h3>50+</h3>
+            <p>Countries</p>
+          </div>
+          <div class="stat-item">
+            <h3>4.9<span class="star">★</span></h3>
+            <p>User Rating</p>
+          </div>
+          <div class="stat-item">
+            <h3>100K+</h3>
+            <p>Happy Users</p>
+          </div>
+        </div>
+
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="logo-icon">
+              <i class="ri-bear-smile-fill"></i>
+            </div>
+            <div>
+              <h4>PawPedia</h4>
+              <p>
+                Your comprehensive guide to dog breeds. Discover, learn, and find your perfect
+                furry companion with our extensive breed database.
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div>
+              <h5>Quick Links</h5>
+              <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#popular">All Breeds</a></li>
+                <li><a href="#footer">Favorites</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5>Connect</h5>
+              <div class="social-icons">
+                <a href="#"><i class="ri-twitter-x-line"></i></a>
+                <a href="#"><i class="ri-github-fill"></i></a>
+                <a href="#"><i class="ri-mail-line"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========= FOOTER ========= -->
+  <footer class="footer" id="footer">
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> PawPedia. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
